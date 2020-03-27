@@ -1,0 +1,17 @@
+<div class="toolbar" role="banner">
+  <img width="40" alt="Angular Logo" src="assets\angularIcon.svg" />
+  <span>To-Do List</span>
+  <div class="listDiv">
+    <ul class="menuList">
+      <li><a href="" routerLink="/todoComp">MY TASKS</a></li>
+      <li><a href="" routerLink="/focusComp">FOCUS MODE</a></li>
+      <li><a href="" routerLink="/historyComp">HISTORY</a></li>
+      <li><a href="" routerLink="/settingsComp">SETTINGS</a></li>
+      <!-- <li><a href="" routerLink = "/mapComp">MAP VIEW</a></li> -->
+      <li><a href="" routerLink="/leafMapComp">MAP VIEW</a></li>
+      <li style="float: right; padding-left: 350px;"><a href="" class="loginBtn" (click)="loginAction($event)"
+          routerLink="/login">LOGIN</a></li>
+    </ul>
+  </div>
+</div>
+<router-outlet></router-outlet>

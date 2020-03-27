@@ -1,0 +1,39 @@
+// div {
+//     display: inline-block;
+//     height: 100%;
+//     width: 50%;
+//     overflow: scroll;
+// }
+table {
+    position: absolute;
+    top: 59px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 91%;
+    width: 100%;
+    border: blue solid 4px;
+}
+.listItems {
+    line-height: 15px;
+    background: aliceblue;
+    border-radius: 4px;
+    padding: 1%;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+tbody {
+    width: 554px;;
+    display:block;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+td {
+    border: aliceblue solid 4px;
+    text-align: center;
+}

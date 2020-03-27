@@ -1,0 +1,24 @@
+.historyDiv {
+    width: 40%;
+    margin-left: 33%;
+    margin-top: 4%;
+}
+
+tbody {
+    display:block;
+    height: 444px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+}
+
+tr, td {
+    border:1px solid #1976d2;
+    text-align: center;
+    font-size: 25px;
+}

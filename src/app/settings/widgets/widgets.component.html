@@ -1,0 +1,38 @@
+<!-- <div>
+    ngResizable [rzHandles]="'e,s,se'" rzMinWidth = 300 rzMinHeight = 301 
+</div> -->
+<div style="height: fit-content; width: fit-content;" class="drag-boundary"
+    [ngClass]="{ 'top-b': !edge?.top, 'bottom-b': !edge?.bottom, 'left-b': !edge?.left, 'right-b': !edge?.right }"
+    #myBounds>
+    <div ngDraggable class="drag-block" [bounds]="myBounds" [inBounds]="inBounds" (edge)="checkEdge($event)"
+        style="width: 50vh; height: fit-content;">
+        <!-- <split direction="vertical">
+            <split-area size="10" style="background: #1976d2; color: white;">
+                <div>
+                    <label style="font-size: 25px;">{{date}}</label>
+                    <label (click)="closeWidget"
+                        style="float: right; margin-top: 0.3%; font-size: 25px; margin-right: 3%;">X</label></div>
+            </split-area>
+            <split-area size="90" style="background: azure;">
+                <ul style="font-size: 25px; overflow: auto;">
+                    <li *ngFor="let task of wTask;" class="listItems">
+                        <label> {{task.Message}} </label>
+                    </li>
+                </ul>
+            </split-area>
+        </split> -->
+        <div style="background: #1976d2; color: white; height: fit-content; width: -webkit-fill-available;">
+            <div>
+                <label style="font-size: 25px;">{{date}}</label>
+                <label (click)="closeWidget"
+                    style="float: right; margin-top: 0.3%; font-size: 25px; margin-right: 3%;">X</label></div>
+        </div>
+        <div style="background: azure; height: fit-content; width: -webkit-fill-available; padding-top: 1px;">
+            <ul style="font-size: 25px; overflow: auto;">
+                <li *ngFor="let task of wTask;" class="listItems">
+                    <label> {{task.Message}} </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

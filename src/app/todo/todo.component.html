@@ -1,0 +1,33 @@
+<div style="width: 40%; margin: auto;">
+    <table style="width: 100%;">
+        <tr>
+            <td style="text-align:left;">
+                <i class="fa fa-arrow-circle-o-left" (click)="previousDate()"></i>
+            </td>
+            <td style="text-align:center;">
+                <h2 id="printdate">{{ dateVal }}</h2>
+            </td>
+            <td style="text-align:right;">
+                <i class="fa fa-arrow-circle-o-right" (click)="nextDate()"></i>
+            </td>
+        </tr>
+    </table>
+    <!-- <p *ngFor="let alert of alerts">
+        <ngb-alert [type]="alert.type" (close)="close(alert)">{{ alert.message }}</ngb-alert>
+    </p> -->
+    <div class="tasksBox">
+        <h1>What are your FIVE tasks to do today?</h1>
+        <div class="tasksDiv">
+            <ul style="list-style-type: none; margin-left: -5%;">
+                <li *ngFor="let task of tasklist; let i = index;" class="listItems">
+                    <input type="checkbox" style="transform: scale(1.7);" (change) = "taskChecked($event)" id= {{i}}/>
+                    <input type="text" value={{task.Message}} class="editInput" disabled (keyup)="taskChanged($event)" (blur)="taskChanged($event)" />
+                    <i class="fa fa-trash-o" style="transform: scale(1); float:right; padding-top: 3px;" (click)="deleteTask($event)"></i>
+                    <i class="fa fa-edit" style="transform: scale(1); float:right; padding-right: 5px; padding-top: 5px;" (click)="editTask($event)"></i>
+                </li>
+            </ul>
+            <input type="text" id="myInput" [(ngModel)]="task" placeholder="Enter the task....">
+            <button id="addBtn" (click)="addTask()">Add</button>
+        </div>
+    </div>
+</div>

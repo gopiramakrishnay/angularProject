@@ -1,0 +1,13 @@
+<div>
+    <h2 style="text-align: center;">Leaflet Map</h2>
+    <br>
+    <br>
+    <div style="height: 449px;" 
+    leaflet [leafletOptions]="options" 
+    [leafletLayersControl]="route" 
+    [leafletLayers]="layers" (leafletClick)="addMarker($event)" 
+    (leafletMapReady)="onMapReady($event)">
+        <div *ngIf="showLayer" [leafletLayer]="layer"></div>
+    </div>
+    <!-- <div id='map' class={{map}}></div> -->
+</div>

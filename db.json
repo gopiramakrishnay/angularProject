@@ -1,0 +1,41 @@
+{
+  "credentials": [
+    {
+      "id": "gopi",
+      "uname": "gopi",
+      "password": "2345"
+    }
+  ],
+  "A1": {
+    "type": "success",
+    "message": "Login Success"
+  },
+  "A2": {
+    "type": "success",
+    "message": "Task added Successfully"
+  },
+  "A3": {
+    "type": "warning",
+    "message": "Tasks limit Exceeded"
+  },
+  "A4": {
+    "type": "info",
+    "message": "Empty Task not Allowed."
+  },
+  "A5": {
+    "type": "warning",
+    "message": "Duplicate Task not Allowed"
+  },
+  "A6": {
+    "type": "success",
+    "message": "Task Edited Successfully"
+  },
+  "A7": {
+    "type": "success",
+    "message": "Task Deleted Successfully"
+  },
+  "A8": {
+    "type": "warning",
+    "message": "Wrong Credentials"
+  }
+}

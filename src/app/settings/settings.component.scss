@@ -1,0 +1,24 @@
+ul {
+    list-style-type: none;
+    font-size: 25px;
+    bottom: 75%;
+    cursor: pointer;
+}
+li {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.leftBlock {
+    height: 91vh;
+    background: khaki;
+    overflow: hidden;
+    margin-top: 1.3vh;
+}
+.rightBlock {
+    height: 91vh;
+    padding-top: 20px;
+}
+.rightLayout {
+    display: flex;
+    flex-wrap: wrap;
+}

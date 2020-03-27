@@ -1,0 +1,17 @@
+<div class="historyDiv">
+    <h2 style="text-align: center;">Tasks History</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let hist of historyList;">
+                <td>{{hist.date}}</td>
+                <td>{{hist.status}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

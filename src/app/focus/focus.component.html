@@ -1,0 +1,25 @@
+<!-- <div style="height: 100%; width: 20%; position: fixed; left: 0; z-index: 1;">
+right
+</div>
+<div style="height: 100%; width: 80%; position: fixed; right: 0; z-index: 1;"> -->
+<table>
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fTask of focusTasks;">
+            <td>{{fTask.date}}</td>
+            <td>
+                <ul style="list-style-type: none; margin-left: -5%;">
+                    <li *ngFor="let task of fTask.list;" class="listItems">
+                        <label> {{task.Message}} </label>
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<!-- </div> -->

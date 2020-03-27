@@ -1,0 +1,44 @@
+<div style="height: 100%; width: 100%;">
+<split direction="horizontal" style="margin-left: -1%;">
+    <split-area size="20">
+        <div class="leftBlock" #leftBlock>
+            <ul>
+                <li (click)="settingsClick = !settingsClick">
+                    Change Password
+                </li>
+                <li (click)="calClick = !calClick">
+                    <!-- <mat-form-field>
+                        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field> -->
+                    Widgets
+                </li>
+            </ul>
+            <div *ngIf="calClick; else elseBlock1" style="margin-top: -10%;">
+                <mat-calendar #calendar [(selected)]="selectedDate" (selectedChange) = "dateChanged($event)"></mat-calendar>
+            </div>
+            <ng-template #elseBlock1></ng-template> 
+        </div>
+    </split-area>
+    <split-area size="80">
+        <div class="rightBlock">
+            <div *ngIf="settingsClick; else elseBlock2" #rightBlock>
+                <app-chpass></app-chpass>
+            </div>
+            <ng-template #elseBlock2 style="width: fit-content;">
+                <!-- <ul style="list-style-type: none;">
+                    <li *ngFor = "let wid of wStorage">
+                        <app-widgets [date]="wid.date" [wTask] = "wid.storage"></app-widgets>
+                    </li>
+                </ul> -->
+                <div class="rightLayout" #rightLayout>
+                    <div *ngFor = "let wid of wStorage">
+                        <app-widgets [date]="wid.date" [wTask] = "wid.storage"></app-widgets>
+                    </div>
+                </div>
+            </ng-template>
+        </div>
+    </split-area>
+</split>
+</div>

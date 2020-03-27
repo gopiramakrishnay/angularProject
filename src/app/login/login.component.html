@@ -1,0 +1,12 @@
+<div class="loginDiv">
+    <form [formGroup]="fullForm" (ngSubmit) = "submitLogin()">
+        <div style="display: flex;">
+            <p class="loginLabel">User Name </p><input type="text" formControlName='uname' class="loginInput">
+        </div>
+        <br>
+        <div style="display: flex;">
+            <p class="loginLabel">Password </p><input type="password" formControlName='pass' class="loginInput">
+        </div>
+        <button type="submit" [disabled] = "!fullForm.valid" class="loginSubmit">Submit</button>
+    </form>
+</div>

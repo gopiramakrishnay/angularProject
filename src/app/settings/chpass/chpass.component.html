@@ -1,0 +1,16 @@
+<div class="chDiv">
+    <h2 style="margin-right: 14%;">Change Password</h2>
+    <form [formGroup]="chForm" style="margin-left: 15%;">
+        <div style="display: flex;">
+            <p class="chLabel">Old Password</p> <input type="password" value={{Opass}} class="chInput"
+                formControlName='Opass'>
+        </div>
+        <div style="display: flex;">
+            <p class="chLabel">New Password</p> <input type="password" class="chInput" formControlName='Npass'>
+        </div>
+        <div style="display: flex;">
+            <p class="chLabel">Confirm Password</p> <input type="password" class="chInput" formControlName='Copass'>
+        </div>
+        <button type="submit" [disabled]="!chForm.valid" class="chSubmit" (click)="changeSubmit()">Submit</button>
+    </form>
+</div>
