@@ -35,10 +35,6 @@
               "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": [
-              "../node_modules/masonry-layout/dist/masonry.pkgd.min.js",
-              "../node_modules/isotope-layout/dist/isotope.pkgd.min.js",
-              "../node_modules/imagesloaded/imagesloaded.pkgd.js",
-              "../node_modules/isotope-layout/dist/isotope.pkgd.js"
             ]
           },
           "configurations": {
@@ -108,10 +104,6 @@
               "node_modules/angular2-draggable/css/resizable.min.css"
             ],
             "scripts": [
-              "../node_modules/masonry-layout/dist/masonry.pkgd.min.js",
-              "../node_modules/isotope-layout/dist/isotope.pkgd.min.js",
-              "../node_modules/imagesloaded/imagesloaded.pkgd.js",
-              "../node_modules/isotope-layout/dist/isotope.pkgd.js"
             ]
           }
         },

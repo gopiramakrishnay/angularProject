@@ -1,4 +1,4 @@
-declare var Isotope: any;
+// declare var Isotope: any;
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { MatCalendar } from '@angular/material';
@@ -29,11 +29,11 @@ export class SettingsComponent implements OnInit {
 
   ngOnInit() {
     this.IsoClass = document.querySelector('.rightLayout');
-    this.IsoLayout = new Isotope(this.IsoClass, {
-      masonry: {
-        columnWidth: 30
-      }
-    });
+    // this.IsoLayout = new Isotope(this.IsoClass, {
+    //   masonry: {
+    //     columnWidth: 30
+    //   }
+    // });
   }
   dateChanged(event) {
     this.dtNum = event.toString().split(" ")[2];
@@ -51,11 +51,11 @@ export class SettingsComponent implements OnInit {
     this.taskService.getTasks(Lid).subscribe(res => {
       if (res) {
         this.wStorage.push({ "date": this.store, "storage": res.List_items });
-        this.IsoLayout = new Isotope(this.IsoClass, {
-          masonry: {
-            columnWidth: 30
-          }
-        });
+        // this.IsoLayout = new Isotope(this.IsoClass, {
+        //   masonry: {
+        //     columnWidth: 30
+        //   }
+        // });
       }
     });
     // if(localStorage.getItem(this.store)) {
