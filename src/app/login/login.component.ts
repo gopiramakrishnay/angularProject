@@ -41,14 +41,14 @@ export class LoginComponent implements OnInit {
       "uname": this.fullForm.value.uname,
       "password": this.fullForm.value.pass
     }
-    this.tasksService.getCredentials(creds).subscribe(res => {
-      if (res.length) {
-        // this.toast.success('Login', 'Success', { timeOut: 0 });
-        this.sharedData.userName = res[0].uname;
+    // this.tasksService.getCredentials(creds).subscribe(res => {
+    //   if (res.length) {
+    //     // this.toast.success('Login', 'Success', { timeOut: 0 });
+    //     this.sharedData.userName = res[0].uname;
         localStorage.setItem("loginSuccess", "true");
         this.sharedData.loginText = this.elRef.nativeElement.parentElement.getElementsByClassName('loginBtn')[0].text = "LOGOUT";
         this.rou.navigate(['todoComp']);
-      }
-    });
+    //   }
+    // });
   }
 }

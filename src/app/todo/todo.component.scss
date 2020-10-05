@@ -52,7 +52,7 @@ h1 {
 
 #myInput {
     font-size: 25px;
-    width: 85%;
+    width: 80%;
     height: 30px;
     padding-left: 9px;
     border-radius: 9px;
@@ -60,6 +60,7 @@ h1 {
     outline: none;
     background: #d2e7fc;
     margin-left: 3%;
+    margin-right: 10px;
 }
 
 #addBtn {
@@ -73,6 +74,7 @@ h1 {
     color: white;
     padding: 1% 1.5% 1% 1%;
     cursor: pointer;
+    margin-left: 10px;
     &:hover {
         color: rgb(23, 0, 128);
     }
